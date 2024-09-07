@@ -18,7 +18,11 @@ class ScenarioFitness(base.Fitness):
     # maximize number of unique decisions being made
     # maximize pairs of conflict trajectory
     # maximize unique violation
-    weights = (-1.0, 1.0, 1.0, 1.0)
+    # minimize average comfort
+    # maximize environmental complexity
+    # minimize TTC (Time-To-Collision)
+    weights = (-1.0, 1.0, 1.0, 1.0, -1.0, 1.0, -1.0) #NEW
+
     """
     :note: minimize closest distance, maximize number of decisions,
       maximize pairs having conflicting trajectory,
